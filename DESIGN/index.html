@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Back Kart — Editorial Rewards & Smart Shopping Ecosystem</title>
+  <meta name="description" content="The next generation loyalty and cash rewards platform for India's digital consumers. Earn verified coins on Amazon, Flipkart, Myntra, and Meesho with instant UPI redemption.">
+  
+  <!-- Modern Editorial & Minimal Typography: Inter & Instrument Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css?v=4.2">
+</head>
+<body>
+
+  <!-- Toast Notification Feedback -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- 1. MINIMAL FLOATING NAVIGATION -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Cash Back Kart Home">
+        <span class="logo-symbol">CBK</span>
+        <span class="logo-text">Cash Back Kart</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#stores" class="nav-link">Stores</a></li>
+          <li><a href="#stepping-stones" class="nav-link">Solutions</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#app-experience" class="nav-link">Platform</a></li>
+          <li><a href="#calculator" class="nav-link">Rewards Calc</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#calculator" class="nav-link-subtle">Sign In</a>
+        <a href="#loop" class="pill-btn pill-btn-primary">
+          <span>Get Started</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION (EDITORIAL ASYMMETRIC) -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow eyebrow-dark">SMARTER SHOPPING / MORE REWARDS</span>
+            <h1 class="hero-title">
+              The next generation Loyalty and <span class="serif-italic">Rewards</span>
+            </h1>
+            <p class="hero-desc">
+              Shop your favorite brands through Cash Back Kart and earn verified cashback and liquid coins on every eligible purchase.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#stores" class="pill-btn pill-btn-primary">
+                <span>Explore Stores</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="#stepping-stones" class="pill-btn pill-btn-outline">How it works</a>
+            </div>
+
+            <div class="hero-metrics-strip">
+              <div class="metric-item">
+                <span class="metric-val">100+</span>
+                <span class="metric-lbl">Partner Brands</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">10:1</span>
+                <span class="metric-lbl">Coins to INR</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">Instant</span>
+                <span class="metric-lbl">UPI Settlement</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-frame">
+            <div class="hero-composition-stage">
+              <div class="stage-ambient-glow"></div>
+
+              <!-- Floating 3D Coin Tokens -->
+              <div class="floating-token token-terrazzo"></div>
+              <div class="floating-token token-obsidian"></div>
+
+              <!-- Smartphone Mockup Layer -->
+              <div class="phone-mockup">
+                <div class="phone-inner">
+                  <div class="phone-top-notch"></div>
+                  <div class="phone-tier-badge">Gold Tier Member</div>
+                  <div class="phone-balance-lbl">Available Balance</div>
+                  <div class="phone-balance-val">₹15,020.00</div>
+                  
+                  <div class="phone-card-graphic">
+                    <div class="phone-card-chip"></div>
+                    <div class="phone-card-num">•••• 8824</div>
+                  </div>
+
+                  <div class="phone-recent-activity">
+                    <div class="activity-row">
+                      <span class="activity-merchant">Amazon Pay</span>
+                      <span class="activity-coins">+1,200 Coins</span>
+                    </div>
+                    <div class="activity-row">
+                      <span class="activity-merchant">Flipkart</span>
+                      <span class="activity-coins">+850 Coins</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Physical Matte Black Card on Pedestal -->
+              <div class="physical-card-mockup">
+                <div class="card-top-row">
+                  <span class="card-logo-mini">CBK REWARDS</span>
+                  <div class="card-sunburst-glyph"></div>
+                </div>
+                <div class="card-bottom-row">
+                  <span class="card-holder">EXCLUSIVE REWARDS</span>
+                  <div class="card-network-dots">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cylindrical Layered Coin Stack -->
+              <div class="coin-stack-pedestal">
+                <div class="cylinder-rings">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <!-- Stone Pedestal Base -->
+              <div class="hero-stone-pedestal"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. STRATEGIC ECOSYSTEM (REFERENCE "YAP" STYLE) -->
+    <section class="strategic-section" id="strategic">
+      <div class="container">
+        <div class="strategic-grid">
+          <div class="strategic-content">
+            <span class="eyebrow eyebrow-dark">OUR STRATEGIC ECOSYSTEM</span>
+            <h2 class="strategic-title">
+              India's premier independent <br>Digital Rewards Platform
+            </h2>
+            <p class="strategic-desc">
+              Cash Back Kart connects consumers directly with India's largest e-commerce platforms. By transforming routine purchases into confirmed, liquid coin reserves, we ensure every transaction carries tangible monetary value with bank-grade telemetry.
+            </p>
+            <a href="#how-it-works" class="pill-btn pill-btn-outline">
+              <span>Learn More</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="strategic-media-card">
+            <div class="chrome-sculpture-wrap">
+              <div class="chrome-3d-text">CBK</div>
+              <div class="chrome-stone-stand"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FULL-WIDTH DARK SECTION: "CONNECT SHOPPING & REAL ECONOMY" -->
+    <section class="goal-dark-section" id="goal">
+      <div class="container">
+        <div class="goal-header-center">
+          <span class="eyebrow eyebrow-light">OUR GOAL</span>
+          <h2 class="goal-title">
+            Connect Shopping <span class="serif-italic">and Real Economy</span>
+          </h2>
+          <p class="goal-lead-text">
+            Cash Back Kart commits to connect consumer savings and the real economy by becoming the go-to reward and loyalty backbone for millions of daily shoppers.
+          </p>
+        </div>
+
+        <!-- Overlapping Editorial Portrait Collage (Reference Image 1 Bottom) -->
+        <div class="editorial-portrait-collage">
+          <!-- Person 1: Left Curly Hair -->
+          <div class="collage-photo-frame photo-left-curly">
+            <img 
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" 
+              alt="Editorial portrait of shopper"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Person 2: Mid Smiling Beard -->
+          <div class="collage-photo-frame photo-mid-smiling-beard">
+            <img 
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" 
+              alt="Editorial portrait of customer"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Person 3: Mid Glasses -->
+          <div class="collage-photo-frame photo-mid-glasses">
+            <img 
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" 
+              alt="Editorial portrait of user"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Person 4: Right Hijab / Smiling -->
+          <div class="collage-photo-frame photo-right-hijab">
+            <img 
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" 
+              alt="Editorial portrait of member"
+              loading="lazy"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FOUR STEPPING STONES SECTION (REFERENCE IMAGE 2 TOP) -->
+    <section class="stepping-stones-section" id="stepping-stones">
+      <div class="container">
+        <div class="section-intro-center">
+          <span class="eyebrow eyebrow-dark">OUR SOLUTION</span>
+          <h2 class="section-headline">
+            Cash Back Kart unlocks four <span class="serif-italic">stepping stones</span>
+          </h2>
+          <p class="section-subtext">
+            To the next-generation loyalty and rewards program with user transparency, engagement, and direct cash value.
+          </p>
+        </div>
+
+        <div class="stepping-grid">
+          <div class="stepping-tabs">
+            <div class="stepping-tab is-active" data-step="1" tabindex="0">
+              <h3 class="stepping-tab-title">Reward Program</h3>
+              <p class="stepping-tab-desc">Cumulate CBK Coins on every purchase across partner stores with automated tracking.</p>
+            </div>
+
+            <div class="stepping-tab" data-step="2" tabindex="0">
+              <h3 class="stepping-tab-title">Direct Redemptions</h3>
+              <p class="stepping-tab-desc">Access zero-deduction bank transfers and instant UPI payouts upon confirmation.</p>
+            </div>
+
+            <div class="stepping-tab" data-step="3" tabindex="0">
+              <h3 class="stepping-tab-title">Store Marketplace</h3>
+              <p class="stepping-tab-desc">Explore verified exclusive cashback offers across Amazon, Flipkart, Meesho, and 100+ brands.</p>
+            </div>
+
+            <div class="stepping-tab" data-step="4" tabindex="0">
+              <h3 class="stepping-tab-title">Referral Network</h3>
+              <p class="stepping-tab-desc">Invite friends and earn continuous lifetime rewards on every purchase they complete.</p>
+            </div>
+          </div>
+
+          <div class="stepping-media-stage">
+            <div class="stepping-photo-container">
+              <img 
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80" 
+                alt="Woman smiling while shopping and earning cashback"
+                id="steppingDisplayImg"
+                loading="lazy"
+              >
+            </div>
+            <!-- Floating Black Obsidian Disc -->
+            <div class="floating-black-disc">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v10M8 12h8"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PALE PASTEL YELLOW SECTION: "A NEW, ONE-STOP REWARDS SYSTEM" -->
+    <section class="pastel-yellow-section" id="rewards-system">
+      <div class="container">
+        <div class="yellow-grid">
+          <div class="yellow-content">
+            <span class="eyebrow eyebrow-dark">SEAMLESS PROTOCOL</span>
+            <h2 class="yellow-title">
+              A new, one-stop cash rewards system
+            </h2>
+            <p class="yellow-desc">
+              For retail and online shoppers looking to convert recurring grocery, fashion, and tech purchases into liquid, withdrawable cash rewards.
+            </p>
+            <a href="#stores" class="pill-btn pill-btn-primary">
+              <span>Learn More</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="yellow-cards-stack">
+            <!-- White Card 1 -->
+            <div class="white-floating-card">
+              <div class="card-icon-frame">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                  <line x1="12" y1="18" x2="12.01" y2="18"/>
+                </svg>
+              </div>
+              <div class="card-info">
+                <h4>Simple interface</h4>
+                <p>1-click redirect and tracking without cumbersome extensions or coupon code hunting.</p>
+              </div>
+            </div>
+
+            <!-- White Card 2 -->
+            <div class="white-floating-card">
+              <div class="card-icon-frame">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <div class="card-info">
+                <h4>Real-time telemetry</h4>
+                <p>Automated purchase verification and ledger reconciliation direct to your dashboard.</p>
+              </div>
+            </div>
+
+            <!-- White Card 3 -->
+            <div class="white-floating-card">
+              <div class="card-icon-frame">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="9"/>
+                  <path d="M12 7v10M9 9h6"/>
+                </svg>
+              </div>
+              <div class="card-info">
+                <h4>Liquid coin reserves</h4>
+                <p>Fixed 10 CBK Coins = ₹1.00 INR ratio backed by confirmed affiliate commissions.</p>
+              </div>
+            </div>
+
+            <!-- White Card 4 -->
+            <div class="white-floating-card">
+              <div class="card-icon-frame">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div class="card-info">
+                <h4>Instant UPI settlement</h4>
+                <p>Disburse earned rewards straight to Google Pay, PhonePe, Paytm, or direct IMPS.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. "EVERYTHING YOU NEED" (3-CARD PASTEL ROW) -->
+    <section class="everything-section" id="how-it-works">
+      <div class="container">
+        <div class="section-intro-center">
+          <span class="eyebrow eyebrow-dark">OUR FEATURES</span>
+          <h2 class="section-headline">
+            <span class="serif-italic">Everything</span> you need
+          </h2>
+          <p class="section-subtext">
+            Three intuitive stages to unlock, accumulate, and redeem cash rewards across India.
+          </p>
+        </div>
+
+        <div class="pastel-row-grid">
+          <!-- Card 1: Soft Peach -->
+          <div class="pastel-feature-card card-pastel-peach">
+            <div class="pastel-card-media">
+              <img 
+                src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80" 
+                alt="Pay & Shop on verified stores"
+                loading="lazy"
+              >
+            </div>
+            <div class="pastel-card-content">
+              <h3>Pay & Shop</h3>
+              <p>Purchase goods and services from any physical or online store through our verified cashback links.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Soft Blue/Mint -->
+          <div class="pastel-feature-card card-pastel-mint">
+            <div class="pastel-card-media">
+              <img 
+                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" 
+                alt="Accumulate CBK Coins"
+                loading="lazy"
+              >
+            </div>
+            <div class="pastel-card-content">
+              <h3>Accumulate</h3>
+              <p>Cumulate liquid CBK Coins on every transaction with bank-grade ledger transparency and zero fee deductions.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Soft Pale Yellow -->
+          <div class="pastel-feature-card card-pastel-yellow">
+            <div class="pastel-card-media">
+              <img 
+                src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=600&q=80" 
+                alt="Instant UPI Redemptions"
+                loading="lazy"
+              >
+            </div>
+            <div class="pastel-card-content">
+              <h3>Instant Redeem</h3>
+              <p>Transfer confirmed cashback directly into your UPI address or bank account within seconds.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. STORE DISCOVERY EDITORIAL TILES -->
+    <section class="stores-section" id="stores">
+      <div class="container">
+        <div class="stores-header-row">
+          <div>
+            <span class="eyebrow eyebrow-dark">FEATURED MERCHANTS</span>
+            <h2 class="section-headline">
+              Your favorite stores.<br>
+              <span class="serif-italic">More rewarding.</span>
+            </h2>
+          </div>
+
+          <div class="category-filter-pills" id="storeFilters">
+            <button class="filter-pill is-active" data-cat="all">All Stores</button>
+            <button class="filter-pill" data-cat="ecommerce">Marketplaces</button>
+            <button class="filter-pill" data-cat="fashion">Fashion</button>
+            <button class="filter-pill" data-cat="electronics">Electronics</button>
+            <button class="filter-pill" data-cat="travel">Travel</button>
+          </div>
+        </div>
+
+        <div class="editorial-stores-grid" id="storesGrid">
+          <!-- Amazon -->
+          <article class="store-editorial-card" data-category="ecommerce">
+            <div class="store-top-bar">
+              <span class="store-brand-name">Amazon India</span>
+              <span class="store-badge-tag">TRENDING</span>
+            </div>
+            <div class="store-rate-callout">
+              <span class="rate-eyebrow">CASHBACK UP TO</span>
+              <span class="rate-highlight">8.5%</span>
+            </div>
+            <a href="#calculator" class="store-card-action">
+              <span>Activate Offer</span>
+              <span>&rarr;</span>
+            </a>
+          </article>
+
+          <!-- Flipkart -->
+          <article class="store-editorial-card" data-category="ecommerce">
+            <div class="store-top-bar">
+              <span class="store-brand-name">Flipkart</span>
+              <span class="store-badge-tag">POPULAR</span>
+            </div>
+            <div class="store-rate-callout">
+              <span class="rate-eyebrow">CASHBACK UP TO</span>
+              <span class="rate-highlight">12.0%</span>
+            </div>
+            <a href="#calculator" class="store-card-action">
+              <span>Activate Offer</span>
+              <span>&rarr;</span>
+            </a>
+          </article>
+
+          <!-- Meesho -->
+          <article class="store-editorial-card" data-category="fashion">
+            <div class="store-top-bar">
+              <span class="store-brand-name">Meesho</span>
+              <span class="store-badge-tag">HIGHEST RATE</span>
+            </div>
+            <div class="store-rate-callout">
+              <span class="rate-eyebrow">CASHBACK UP TO</span>
+              <span class="rate-highlight">15.0%</span>
+            </div>
+            <a href="#calculator" class="store-card-action">
+              <span>Activate Offer</span>
+              <span>&rarr;</span>
+            </a>
+          </article>
+
+          <!-- Myntra -->
+          <article class="store-editorial-card" data-category="fashion">
+            <div class="store-top-bar">
+              <span class="store-brand-name">Myntra</span>
+              <span class="store-badge-tag">FASHION</span>
+            </div>
+            <div class="store-rate-callout">
+              <span class="rate-eyebrow">CASHBACK UP TO</span>
+              <span class="rate-highlight">9.5%</span>
+            </div>
+            <a href="#calculator" class="store-card-action">
+              <span>Activate Offer</span>
+              <span>&rarr;</span>
+            </a>
+          </article>
+
+          <!-- AJIO -->
+          <article class="store-editorial-card" data-category="fashion">
+            <div class="store-top-bar">
+              <span class="store-brand-name">AJIO</span>
+              <span class="store-badge-tag">EXCLUSIVE</span>
+            </div>
+            <div class="store-rate-callout">
+              <span class="rate-eyebrow">CASHBACK UP TO</span>
+              <span class="rate-highlight">11.0%</span>
+            </div>
+            <a href="#calculator" class="store-card-action">
+              <span>Activate Offer</span>
+              <span>&rarr;</span>
+            </a>
+          </article>
+
+          <!-- Nykaa -->
+          <article class="store-editorial-card" data-category="fashion">
+            <div class="store-top-bar">
+              <span class="store-brand-name">Nykaa</span>
+              <span class="store-badge-tag">BEAUTY</span>
+            </div>
+            <div class="store-rate-callout">
+              <span class="rate-eyebrow">CASHBACK UP TO</span>
+              <span class="rate-highlight">10.5%</span>
+            </div>
+            <a href="#calculator" class="store-card-action">
+              <span>Activate Offer</span>
+              <span>&rarr;</span>
+            </a>
+          </article>
+
+          <!-- Croma -->
+          <article class="store-editorial-card" data-category="electronics">
+            <div class="store-top-bar">
+              <span class="store-brand-name">Croma</span>
+              <span class="store-badge-tag">GADGETS</span>
+            </div>
+            <div class="store-rate-callout">
+              <span class="rate-eyebrow">CASHBACK UP TO</span>
+              <span class="rate-highlight">6.0%</span>
+            </div>
+            <a href="#calculator" class="store-card-action">
+              <span>Activate Offer</span>
+              <span>&rarr;</span>
+            </a>
+          </article>
+
+          <!-- MakeMyTrip -->
+          <article class="store-editorial-card" data-category="travel">
+            <div class="store-top-bar">
+              <span class="store-brand-name">MakeMyTrip</span>
+              <span class="store-badge-tag">TRAVEL</span>
+            </div>
+            <div class="store-rate-callout">
+              <span class="rate-eyebrow">CASHBACK UP TO</span>
+              <span class="rate-highlight">8.0%</span>
+            </div>
+            <a href="#calculator" class="store-card-action">
+              <span>Activate Offer</span>
+              <span>&rarr;</span>
+            </a>
+          </article>
+        </div>
+
+        <!-- 9. REWARDS CALCULATOR (EDITORIAL UPGRADE) -->
+        <div class="calc-section-wrapper" id="calculator">
+          <div class="editorial-calc-panel">
+            <div class="calc-panel-header">
+              <div>
+                <span class="eyebrow eyebrow-dark">ESTIMATE YOUR REWARDS</span>
+                <h3 class="calc-headline">Annual Coin Accrual Calculator</h3>
+              </div>
+
+              <div class="calc-store-chips" id="calcStoreChips">
+                <button class="store-chip is-selected" data-rate="0.10">Average Basket (10%)</button>
+                <button class="store-chip" data-rate="0.085">Amazon (8.5%)</button>
+                <button class="store-chip" data-rate="0.12">Flipkart (12%)</button>
+                <button class="store-chip" data-rate="0.15">Meesho (15%)</button>
+              </div>
+            </div>
+
+            <div class="calc-body-layout">
+              <div class="slider-container">
+                <div class="slider-top-labels">
+                  <span>Monthly Online Spend</span>
+                  <strong class="spend-big-val" id="spendDisplay">₹15,000 / mo</strong>
+                </div>
+                <input 
+                  type="range" 
+                  id="spendSlider" 
+                  min="2000" 
+                  max="100000" 
+                  step="1000" 
+                  value="15000" 
+                  aria-label="Monthly online shopping spend"
+                >
+                <div class="slider-range-subtext">
+                  <span>₹2,000</span>
+                  <span>₹50,000</span>
+                  <span>₹1,00,000+</span>
+                </div>
+              </div>
+
+              <div class="calc-output-display">
+                <span class="output-eyebrow">PROJECTED ACCRUAL</span>
+                <div class="output-coins-row">
+                  <span class="output-coins-number" id="annualCoinsDisplay">1,80,000</span>
+                  <span class="output-coins-unit">CBK Coins</span>
+                </div>
+                <span class="output-inr-equiv" id="annualCashDisplay">≈ ₹18,000 INR Direct Bank Transfer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. "ALL IN ONE, APP EXPERIENCE" (DARK IMMERSIVE SECTION) -->
+    <section class="app-experience-section" id="app-experience">
+      <div class="container">
+        <div class="app-exp-grid">
+          <div>
+            <span class="eyebrow eyebrow-light">OUR PLATFORM</span>
+            <h2 class="app-exp-headline">
+              <span class="serif-italic">All in one,</span><br>
+              App experience
+            </h2>
+            <p class="goal-lead-text">
+              Users of Cash Back Kart will be able to shop across 100+ stores, monitor real-time ledger attributions, and disburse coin yields with zero friction.
+            </p>
+
+            <div class="app-exp-features">
+              <div class="exp-feature-bullet">
+                <span class="bullet-dot"></span>
+                <span>Direct bank transfer settlements and instant UPI redemptions without hidden deductions.</span>
+              </div>
+              <div class="exp-feature-bullet">
+                <span class="bullet-dot"></span>
+                <span>Automated commission tracking across Amazon, Flipkart, Myntra and leading retail partners.</span>
+              </div>
+              <div class="exp-feature-bullet">
+                <span class="bullet-dot"></span>
+                <span>VIP membership status tier multiplier unlocking up to 1.5x coin bonuses on festive days.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating 3D Coin Cluster in Dark Space -->
+          <div class="app-tokens-space">
+            <div class="space-ambient-blur"></div>
+            <div class="cluster-token t-center-marble"></div>
+            <div class="cluster-token t-terrazzo-1"></div>
+            <div class="cluster-token t-terrazzo-2"></div>
+            <div class="cluster-token t-silver-mirror"></div>
+            <div class="cluster-token t-dark-rim"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. STRATEGIC PARTNERS MONOCHROME GRID -->
+    <section class="partners-section" id="partners">
+      <div class="container">
+        <span class="eyebrow eyebrow-dark">STRATEGIC PARTNERS</span>
+        
+        <div class="monochrome-hairline-grid">
+          <div class="partner-cell">
+            <img src="images/logo-amazon.png" alt="Amazon" class="partner-logo-img" loading="lazy">
+          </div>
+          <div class="partner-cell">
+            <img src="images/logo-flipkart.png" alt="Flipkart" class="partner-logo-img" loading="lazy">
+          </div>
+          <div class="partner-cell">
+            <img src="images/logo-myntra.png" alt="Myntra" class="partner-logo-img" loading="lazy">
+          </div>
+          <div class="partner-cell">
+            <img src="images/logo-meesho.png" alt="Meesho" class="partner-logo-img" loading="lazy">
+          </div>
+          <div class="partner-cell">
+            <img src="images/logo-ajio.png" alt="AJIO" class="partner-logo-img" loading="lazy">
+          </div>
+          <div class="partner-cell">
+            <img src="images/logo-nykaa.png" alt="Nykaa" class="partner-logo-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. EDITORIAL TESTIMONIAL -->
+    <section class="testimonial-section">
+      <div class="container testimonial-container">
+        <blockquote class="testimonial-quote">
+          “Shopping through Cash Back Kart has seamlessly transformed every routine purchase into tangible wealth.”
+        </blockquote>
+        <div class="testimonial-author">
+          — Riya Sengupta, Principal Designer, Bangalore
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. ATMOSPHERIC FINAL CTA: "STAY IN THE LOOP" -->
+    <section class="sky-cta-section" id="loop">
+      <div class="container">
+        <div class="sky-cta-content">
+          <span class="eyebrow eyebrow-dark">DON'T MISS WHAT'S NEXT</span>
+          <h2 class="sky-headline">
+            <span class="serif-italic">Stay in</span>
+            The Loop
+          </h2>
+
+          <form class="minimal-pill-form" id="signupForm" novalidate>
+            <div class="pill-input-box">
+              <input 
+                type="email" 
+                id="userEmail" 
+                placeholder="Enter your email address" 
+                required 
+                aria-label="Email address"
+              >
+              <button type="submit" id="signupSubmitBtn">SIGN UP</button>
+            </div>
+            <div id="formFeedback" class="form-feedback" style="font-size: 12px; margin-top: 10px;" role="status"></div>
+          </form>
+        </div>
+
+        <!-- 3D Tokens Visual Stage at Base -->
+        <div class="sky-bottom-tokens">
+          <div class="floating-token token-obsidian" style="position: absolute; left: 20%; bottom: 10px;"></div>
+          <div class="floating-token token-terrazzo" style="position: absolute; right: 25%; bottom: 20px;"></div>
+        </div>
+
+        <div class="sky-meta-row">
+          <span>INVESTOR DECK &bull; PRIVACY &bull; TERMS</span>
+          <span>MADE WITH &hearts; FOR SMART SHOPPERS</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 14. MINIMAL RESTRAINED FOOTER -->
+  <footer class="editorial-footer">
+    <div class="container">
+      <div class="footer-columns-grid">
+        <div class="footer-brand">
+          <h3>
+            <span class="logo-symbol" style="width: 22px; height: 22px; font-size: 9px;">CBK</span>
+            Cash Back Kart
+          </h3>
+          <p class="footer-desc">
+            The modern loyalty and coin rewards ecosystem for India's digital-first consumers.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul class="footer-list">
+            <li><a href="#stores">All Stores</a></li>
+            <li><a href="#stepping-stones">Solutions</a></li>
+            <li><a href="#calculator">Rewards Calculator</a></li>
+            <li><a href="#app-experience">Coin Protocol</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-list">
+            <li><a href="#strategic">About CBK</a></li>
+            <li><a href="#goal">Our Mission</a></li>
+            <li><a href="#partners">Brand Partners</a></li>
+            <li><a href="mailto:Cashbackkart.official@gmail.com">Press & Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-list">
+            <li><a href="#" class="legal-trigger" data-modal="privacy">Privacy Policy</a></li>
+            <li><a href="#" class="legal-trigger" data-modal="terms">Terms of Service</a></li>
+            <li><a href="#" class="legal-trigger" data-modal="coins">Coin Redemption Policy</a></li>
+            <li><a href="#" class="legal-trigger" data-modal="cookies">Cookie Settings</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-sub-bar">
+        <span>&copy; <span id="currentYear">2026</span> Cash Back Kart Technologies Pvt. Ltd. All rights reserved.</span>
+        <div class="telemetry-status-badge">
+          <span class="status-dot-pulse"></span>
+          <span>All payment telemetry systems operational</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for Legal & Terms Dialogs -->
+  <div class="modal-backdrop" id="legalModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Privacy Policy</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <button class="pill-btn pill-btn-primary" id="modalDismiss">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=4.0"></script>
+</body>
+</html>
